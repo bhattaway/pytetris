@@ -1,5 +1,5 @@
 import pygame
-import gameobject
+import tile
 
 def main():
     pygame.init()
