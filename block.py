@@ -10,6 +10,17 @@ class Block(gameobject.Gameobject):
         self.tiles = []
         self.make_tiles()
 
+    def __str__(self):
+        s = "<Block type:%s, x:%s, y:%s %s" % \
+                (self.blocktype, self.x, self.y, super().__str__())
+
+        for t in tiles:
+            s += "\n\t%s" % (t)
+
+        s += "\n>"
+
+        return s
+
     def make_tiles(self):
         if self.blocktype == 'o':
             # **
@@ -80,7 +91,7 @@ class Block(gameobject.Gameobject):
         elif self.blocktype == 't':
             # .*.
             # ***
-            #red
+            #purple
             red=225
             green=0
             blue=255
