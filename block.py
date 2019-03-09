@@ -12,6 +12,9 @@ class Block(gameobject.Gameobject):
 
     def make_tiles(self):
         if self.blocktype == 'o':
+            # **
+            # **
+            #yellow
             red=255
             green=255
             blue=0
@@ -20,13 +23,72 @@ class Block(gameobject.Gameobject):
             self.tiles.append(tile.Tile(x=self.x+50, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
         elif self.blocktype == 'i':
+            # ****
+            #lightblue
             red=150
             green=150
             blue=255
             self.tiles.append(tile.Tile(x=self.x, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+50, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+100, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+150, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+        elif self.blocktype == 'l':
+            # ..*
+            # ***
+            #orange
+            red=255
+            green=150
+            blue=0
+            self.tiles.append(tile.Tile(x=self.x+100, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
-            self.tiles.append(tile.Tile(x=self.x, y=self.y+100, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
-            self.tiles.append(tile.Tile(x=self.x, y=self.y+150, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+50, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+100, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+
+        elif self.blocktype == 'j':
+            # *..
+            # ***
+            #darkblue
+            red=255
+            green=150
+            blue=0
+            self.tiles.append(tile.Tile(x=self.x, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+50, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+100, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+        elif self.blocktype == 's':
+            # .**
+            # **.
+            #green
+            red=255
+            green=150
+            blue=0
+            self.tiles.append(tile.Tile(x=self.x+50, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+100, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+50, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+        elif self.blocktype == 'z':
+            # **.
+            # .**
+            #red
+            red=255
+            green=150
+            blue=0
+            self.tiles.append(tile.Tile(x=self.x, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+50, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+50, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+100, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+        elif self.blocktype == 't':
+            # .*.
+            # ***
+            #red
+            red=255
+            green=150
+            blue=0
+            self.tiles.append(tile.Tile(x=self.x+50, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+50, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+            self.tiles.append(tile.Tile(x=self.x+100, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
+
 
     def draw(self, surface):
         for tile in self.tiles:

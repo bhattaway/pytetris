@@ -20,6 +20,16 @@ def main():
     o = block.Block(blocktype='o', x=50, y=0)
     i = block.Block(blocktype='i')
 
+    blocks = []
+
+    blocks.append(block.Block(blocktype='i', x=0, y=0))
+    blocks.append(block.Block(blocktype='o', x=0, y=100))
+    blocks.append(block.Block(blocktype='s', x=0, y=250))
+    blocks.append(block.Block(blocktype='z', x=0, y=400))
+    blocks.append(block.Block(blocktype='l', x=300, y=0))
+    blocks.append(block.Block(blocktype='j', x=300, y=200))
+    blocks.append(block.Block(blocktype='t', x=300, y=400))
+
     
     newgrid = grid.Grid()
 
@@ -35,8 +45,9 @@ def main():
         for o in objects:
             o.draw(screen)
         '''
-        o.draw(screen)
-        i.draw(screen)
+
+        for b in blocks:
+            b.draw(screen)
 
         pygame.display.flip()
         screen.unlock()
