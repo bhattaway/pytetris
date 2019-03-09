@@ -17,9 +17,6 @@ def main():
     #gamestates
 
 
-    o = block.Block(blocktype='o', x=50, y=0)
-    i = block.Block(blocktype='i')
-
     blocks = []
 
     blocks.append(block.Block(blocktype='i', x=0, y=0))
@@ -29,6 +26,9 @@ def main():
     blocks.append(block.Block(blocktype='l', x=300, y=0))
     blocks.append(block.Block(blocktype='j', x=300, y=200))
     blocks.append(block.Block(blocktype='t', x=300, y=400))
+
+    print(blocks[0])
+
 
     
     newgrid = grid.Grid()
