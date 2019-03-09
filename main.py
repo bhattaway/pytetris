@@ -16,11 +16,10 @@ def main():
 
     #gamestates
 
-    t = tile.Tile(x=11, y=22, w=33, h=44, r=100, g=100, b=100, dx=0, dy=0, alive=True)
 
-    b = block.Block(blocktype='o')
+    o = block.Block(blocktype='o', x=50, y=0)
+    i = block.Block(blocktype='i')
 
-    print(t)
     
     newgrid = grid.Grid()
 
@@ -36,8 +35,8 @@ def main():
         for o in objects:
             o.draw(screen)
         '''
-        t.draw(screen)
-        b.draw(screen)
+        o.draw(screen)
+        i.draw(screen)
 
         pygame.display.flip()
         screen.unlock()
