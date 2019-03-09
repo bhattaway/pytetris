@@ -15,8 +15,8 @@ class Block(gameobject.Gameobject):
             # **
             # **
             #yellow
-            red=255
-            green=255
+            red=235
+            green=235
             blue=0
             self.tiles.append(tile.Tile(x=self.x, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x+50, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
@@ -26,7 +26,7 @@ class Block(gameobject.Gameobject):
             # ****
             #lightblue
             red=150
-            green=150
+            green=200
             blue=255
             self.tiles.append(tile.Tile(x=self.x, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x+50, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
@@ -48,9 +48,9 @@ class Block(gameobject.Gameobject):
             # *..
             # ***
             #darkblue
-            red=255
-            green=150
-            blue=0
+            red=70
+            green=70
+            blue=255
             self.tiles.append(tile.Tile(x=self.x, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x+50, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
@@ -59,8 +59,8 @@ class Block(gameobject.Gameobject):
             # .**
             # **.
             #green
-            red=255
-            green=150
+            red=0
+            green=200
             blue=0
             self.tiles.append(tile.Tile(x=self.x+50, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x+100, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
@@ -70,8 +70,8 @@ class Block(gameobject.Gameobject):
             # **.
             # .**
             #red
-            red=255
-            green=150
+            red=235
+            green=0
             blue=0
             self.tiles.append(tile.Tile(x=self.x, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x+50, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
@@ -81,9 +81,9 @@ class Block(gameobject.Gameobject):
             # .*.
             # ***
             #red
-            red=255
-            green=150
-            blue=0
+            red=225
+            green=0
+            blue=255
             self.tiles.append(tile.Tile(x=self.x+50, y=self.y, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
             self.tiles.append(tile.Tile(x=self.x+50, y=self.y+50, w=50, h=50, r=red, g=green, b=blue, dx=0, dy=0, alive=True))
