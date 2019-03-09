@@ -2,6 +2,7 @@ import pygame
 import tile
 import gameobject
 import grid
+import block
 
 def main():
     print("HELLO WORLD!!!")
@@ -15,7 +16,9 @@ def main():
 
     #gamestates
 
-    t = tile.Tile(11, 22, 33, 44, 100, 100, 100, True)
+    t = tile.Tile(x=11, y=22, w=33, h=44, r=100, g=100, b=100, dx=0, dy=0, alive=True)
+
+    b = block.Block(blocktype='o')
 
     print(t)
     
@@ -34,6 +37,7 @@ def main():
             o.draw(screen)
         '''
         t.draw(screen)
+        b.draw(screen)
 
         pygame.display.flip()
         screen.unlock()
