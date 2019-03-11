@@ -1,3 +1,5 @@
+import pygame
+
 class Grid:
     def __init__(self, w=10, h=20):
         self.w = w
@@ -6,7 +8,27 @@ class Grid:
         self.grid = []
 
         for i in range(h):
-            self.grid.append(['a' for _ in range(w)])
+            self.grid.append([None for _ in range(w)])
+
+    def add_tile(self, t, row, col):
+        self.grid[row][col] = t
+
+    def add_block(self, b, row, col):
+        for t in b.tiles:
+            #if b.blocktype
+            self.add_tile(t)
+
+
+
+
+    def draw(self, surface):
+        pygame.draw.rect(surface, (100,100,100), pygame.Rect(100,40,40*10, 40*20))
+
+        for row in self.grid:
+            for t in row:
+                if not t is None:
+                    t.draw(surface)
+        
 
     def __str__(self):
         s = ""
@@ -19,6 +41,7 @@ class Grid:
 
         return s
 
+    '''
     def __repr__(self):
         s = "   "
 
@@ -36,3 +59,4 @@ class Grid:
             s += '\n'
 
         return s
+    '''
